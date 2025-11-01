@@ -1,0 +1,11 @@
+https://github.com/abino-bit/django-personal-blog
+```
+
+### 3. Save the file
+- Press `Ctrl + S` to save
+
+### 4. That's it!
+
+Now the file should contain ONLY this one line:
+```
+https://github.com/abino-bit/django-personal-blog
