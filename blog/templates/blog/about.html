@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}About - My Personal Blog{% endblock %}
+
+{% block content %}
+<div class="about-page">
+    <h2>About Me</h2>
+    
+    <div class="about-content">
+        <div class="about-info">
+            <h3>Hello! I'm {{ name }}</h3>
+            <p class="bio">{{ bio }}</p>
+            
+            <h4>My Interests</h4>
+            <ul class="interests-list">
+                {% for interest in interests %}
+                <li>{{ interest }}</li>
+                {% endfor %}
+            </ul>
+            
+            <p class="contact-info">
+                This blog was created as part of my Django learning journey.
+                I'm excited to continue building my skills in web development!
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

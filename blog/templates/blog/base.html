@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Personal Blog{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Personal Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'blog' %}">Home</a></li>
+                    <li><a href="{% url 'show_all' %}">All Posts</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Personal Blog. Built with Django.</p>
+        </div>
+    </footer>
+</body>
+</html>

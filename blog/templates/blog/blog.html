@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Home - My Personal Blog{% endblock %}
+
+{% block content %}
+<div class="blog-post">
+    <h2>Random Blog Post</h2>
+    <div class="post-content">
+        <img src="{{ image }}" alt="Random image" class="blog-image">
+        <p class="blog-text">{{ blog }}</p>
+    </div>
+    <div class="refresh-note">
+        <p><em>Refresh the page to see a different post and image!</em></p>
+    </div>
+</div>
+{% endblock %}

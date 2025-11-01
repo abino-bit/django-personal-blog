@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}All Posts - My Personal Blog{% endblock %}
+
+{% block content %}
+<div class="all-posts">
+    <h2>All Blog Posts</h2>
+    
+    <section class="posts-section">
+        <h3>Posts</h3>
+        <div class="posts-grid">
+            {% for blog in blogs %}
+            <div class="post-item">
+                <p>{{ forloop.counter }}. {{ blog }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="images-section">
+        <h3>Images Gallery</h3>
+        <div class="images-grid">
+            {% for image in images %}
+            <div class="image-item">
+                <img src="{{ image }}" alt="Blog image {{ forloop.counter }}">
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}
